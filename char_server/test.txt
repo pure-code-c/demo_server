@@ -1,0 +1,30 @@
+
+登录测试
+{"type":"login_request","data":{"account":"1000008","passwd":"banjin"}}
+{"type":"login_request","data":{"account":"1000009","passwd":"banjin"}}
+{"type":"login_request","data":{"account":"1000010","passwd":"banjin"}}
+
+
+连接测试
+{"type": "client_conn_request","data":{ "account": "1000008"}}
+{"type": "client_conn_request","data":{ "account": "1000009"}}
+
+{"type":"client_conn_response","data": {"status": "OK","account": "1000008"}}
+{"type":"client_conn_response","data": {"status": "OK","account": "1000010"}}
+
+
+{"type": "client_disconn_request","data": {"account": "1000009"}}
+
+
+连接的节点
+{"type": "request_conn_friends"}
+
+所有节点
+{"type": "request_all_conn"}
+
+公共消息
+{"type": "send_to_public","data": {"msg": "message"}}
+
+
+单独消息
+{"type": "message_request", "data": {"account": "1000009","msg": "message"}}

@@ -1,0 +1,135 @@
+{
+    "登录协议": {
+        "Client": {
+            "type": "login_request",
+            "data": {
+                "account": "账户id",
+                "passwd": "密码"
+            }
+        },
+        "Server": {
+            "type": "login_response",
+            "data": {
+                "status": "OK / ERROR",
+                "msg": "用户名 / 账号无效 / 密码错误 / 用户不存在 / 用户已登录"
+            }
+        }
+    },
+    "建立消息连接": {
+        "客户端请求": {
+            "type": "client_link_request",
+            "data": {
+                "account": "连接谁"
+            }
+        },
+        "客户端响应": {
+            "type": "client_link_response",
+            "data": {
+                "statsu": "OK / NO",
+                "account": "谁请求的连接"
+            }
+        },
+        "服务器请求": {
+            "type": "server_link_request",
+            "data": {
+                "account": "谁发起连接请求",
+                "username": "xxx"
+            }
+        },
+        "服务器响应": {
+            "type": "server_link_response",
+            "data": {
+                "status": "WAIT / OK / NO / ERROR",
+                "msg": "等待对方同意 / 谁同意的连接 / 谁拒绝连接 / 对方未在线 / 用户不存在 / 不能和自己连接"
+            }
+        }
+    },
+    "断开消息连接": {
+        "客户端请求": {
+            "type": "client_disconn_request",
+            "data": {
+                "account": "断开谁"
+            }
+        },
+        "服务端响应": {
+            "type": "server_disconn_response",
+            "data": {
+                "status": "OK / ERROR",
+                "account": "断开谁"
+            }
+        }
+    },
+    "获取所有连接了的节点": {
+        "客户端请求": {
+            "type": "request_conn_friends"
+        },
+        "服务器响应": {
+            "type": "response_conn_friends",
+            "data": {
+                "account": "XXX;XXX;XXX;XXX",
+                "username": "xxx;xxx;xxx;xxx"
+            }
+        }
+    },
+    "有节点断开连接": {
+        "服务器消息": {
+            "type": "frined_disconn",
+            "data": {
+                "account": "xxx",
+                "username": "xxx"
+            }
+        }
+    },
+    "搜索所有在线用户": {
+        "客户端请求": {
+            "type": "request_all_conn"
+        },
+        "服务端响应": {
+            "type": "response_all_conn",
+            "data": {
+                "account": "xxx;xxx;xxx;",
+                "username": "xxx;xxx;xxx"
+            }
+        }
+    },
+    "发送消息到公共聊天室": {
+        "客户端": {
+            "type": "send_to_public",
+            "data": {
+                "msg": "消息"
+            }
+        },
+        "服务器": {
+            "type": "send_to_public",
+            "data": {
+                "msg": "消息",
+                "account": "发送者id",
+                "username": "发送者username"
+            }
+        }
+    },
+    "消息协议": {
+        "客户端发送消息": {
+            "type": "message_request",
+            "data": {
+                "account": "发送给谁",
+                "msg": "发送的数据"
+            }
+        },
+        "服务器响应消息": {
+            "type": "message_response",
+            "data": {
+                "status": "OK(发送成功) / ERROR(为建立连接)",
+                "account": "发送给谁的数据"
+            }
+        },
+        "服务器发送消息": {
+            "type": "message_send",
+            "data": {
+                "account": "谁发的",
+                "username": "xxx",
+                "msg": "发送的数据"
+            }
+        }
+    }
+}

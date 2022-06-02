@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="reg.js"></script>
+    <style>
+        @import url("reg.css");
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="box">
+        <h2>注册</h2>
+        <!--请求方式设置为get-->
+        <form id="form" action="" method="get">
+            <ul>
+                <li>
+                    <label><span>*</span>用户名：</label>
+                    <!--设置输入框的提示信息-->
+                    <input type="text" placeholder="6-20位，包含字母、数字、下划线" id="username" />
+                </li>
+                <li>
+                    <label><span>*</span>电子邮箱：</label>
+                    <input type="text" placeholder="电子邮箱将用于找回密码" id="email" />
+                </li>
+                <li>
+                    <label><span>*</span>密码：</label>
+                    <!--输入类型设置为密码类型-->
+                    <input type="password" placeholder="6-16位，由字母开头，包含字母、数字、下划线" id="pwd" />
+                </li>
+                <li>
+                    <!--设置行内元素标签-->
+                    <label><span>*</span>确认密码：</label>
+                    <input type="password" placeholder="确认密码必须与密码一致" id="pwdOk" />
+                </li>
+                <li>
+                    <!--设置行内元素标签-->
+                    <label><span>*</span>输入验证码</label>
+                    <input type="text" placeholder="忽略大小写" id="validate" />
+                </li>
+                <li>
+                    <p>
+                        <img id="validate_jpg" src="" alt="验证码" onclick="getValidata()">
+                        <a id="get_validate">点击图片刷新</a>
+                    </p>
+                </li>
+            </ul>
+            <!--绑定表单提交方法-->
+            <button type="button" onclick="formSubmit()">提交</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

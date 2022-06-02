@@ -1,0 +1,83 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box {
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px #bbb;
+    box-sizing: border-box;
+}
+
+.box h2 {
+    text-align: center;
+    color: #666;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.box form {
+    padding: 15px 0;
+}
+
+.box form ul li {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.box form ul li input {
+    border: 1px solid #ddd;
+    height: 38px;
+    padding: 0 10px;
+    line-height: 38px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.box form ul li label {
+    display: block;
+    width: 120px;
+}
+
+.box form ul li label span {
+    color: red;
+    padding-right: 10px;
+}
+
+.box form button {
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: green;
+    color: #fff;
+}
