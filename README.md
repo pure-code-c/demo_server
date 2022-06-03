@@ -41,7 +41,7 @@
 #### 目录结构
 
 ```
-├── char_server					通讯服务器
+├── char_server					通讯服务器（应该是chat_server，问题不大）
 |
 ├── conf						配置文件
 │   └── dbconf.json					数据库相关配置
